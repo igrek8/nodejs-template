@@ -1,0 +1,9 @@
+.prettierignore
+.eslintignore
+.gitignore
+.github/CODEOWNERS
+
+dist/
+.npmrc
+.husky/
+docs/
