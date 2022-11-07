@@ -1,6 +1,6 @@
-[@igrek/nodejs-template](README.md) / Exports
+[@igrek8/nodejs-template](README.md) / Exports
 
-# @igrek/nodejs-template
+# @igrek8/nodejs-template
 
 ## Table of contents
 
@@ -29,4 +29,4 @@ Returns a sum of two numbers
 
 #### Defined in
 
-sum.ts:4
+[sum.ts:4](https://github.com/igrek8/nodejs-template/blob/4c8755a/src/sum.ts#L4)
