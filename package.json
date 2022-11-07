@@ -1,5 +1,5 @@
 {
-  "name": "@igrek/nodejs-template",
+  "name": "@igrek8/nodejs-template",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Igor <igrek8@users.noreply.github.com>",
@@ -7,13 +7,13 @@
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/igrek/nodejs-template",
+  "homepage": "https://github.com/igrek8/nodejs-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/igrek/nodejs-template"
+    "url": "https://github.com/igrek8/nodejs-template"
   },
   "bugs": {
-    "url": "https://github.com/igrek/nodejs-template/issues"
+    "url": "https://github.com/igrek8/nodejs-template/issues"
   },
   "files": [
     "./dist"
