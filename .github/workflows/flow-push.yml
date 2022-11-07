@@ -22,11 +22,11 @@ jobs:
     needs: [install]
     uses: ./.github/workflows/job-build.yml
     secrets: inherit
-  # release:
-  #   if: ${{ github.ref == 'refs/heads/main' && !startsWith(github.event.head_commit.message, 'chore') }}
-  #   needs: [format, lint, test, build]
-  #   uses: ./.github/workflows/job-release.yml
-  #   secrets: inherit
+  release:
+    if: ${{ github.ref == 'refs/heads/main' && !startsWith(github.event.head_commit.message, 'chore') }}
+    needs: [format, lint, test, build]
+    uses: ./.github/workflows/job-release.yml
+    secrets: inherit
   docs:
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: [format, lint, test, build]
