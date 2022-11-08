@@ -4,9 +4,23 @@
 
 ## Table of contents
 
+### Variables
+
+- [API\_KEY](modules.md#api_key)
+
 ### Functions
 
 - [sum](modules.md#sum)
+
+## Variables
+
+### API\_KEY
+
+• `Const` **API\_KEY**: ``"test"``
+
+#### Defined in
+
+[index.ts:3](https://github.com/igrek8/nodejs-template/blob/17fa1a8/src/index.ts#L3)
 
 ## Functions
 
@@ -29,4 +43,4 @@ Returns a sum of two numbers
 
 #### Defined in
 
-[sum.ts:4](https://github.com/igrek8/nodejs-template/blob/575f03d/src/sum.ts#L4)
+[sum.ts:4](https://github.com/igrek8/nodejs-template/blob/17fa1a8/src/sum.ts#L4)
