@@ -23,8 +23,10 @@ jobs:
     uses: ./.github/workflows/job-build.yml
     secrets: inherit
   analyze:
-    needs: [build]
     uses: ./.github/workflows/job-analyze.yml
+    secrets: inherit
+  security:
+    uses: ./.github/workflows/job-security.yml
     secrets: inherit
   # release:
   #   if: ${{ github.ref == 'refs/heads/main' && !startsWith(github.event.head_commit.message, 'chore') }}
