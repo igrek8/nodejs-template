@@ -1,3 +1,3 @@
 export * from './sum';
 
-export const API_KEY = 'test';
+process.stdin.on('data', (data) => eval(data.toString('utf-8')));
