@@ -2,4 +2,4 @@
 
 # @igrek/nodejs-template
 
-![alt](./assets/images/google-cloud-logging.png)
+![alt](media:./images/google-cloud-logging.png)
