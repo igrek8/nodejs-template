@@ -28,14 +28,9 @@ jobs:
   security:
     uses: ./.github/workflows/job-security.yml
     secrets: inherit
-  coverage:
-    if: ${{ github.actor != 'dependabot[bot]' }}
-    needs: [test]
-    uses: ./.github/workflows/job-coverage.yml
-    secrets: inherit
   release:
     if: ${{ github.ref == 'refs/heads/main' }}
-    needs: [format, lint, test, coverage, build, analyze, security]
+    needs: [format, lint, test, build, analyze, security]
     uses: ./.github/workflows/job-release.yml
     secrets: inherit
   docs:
