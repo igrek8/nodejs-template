@@ -14,7 +14,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: srvaroa/labeler@v0.9
-  coverage:
-    if: ${{ github.actor != 'dependabot[bot]' }}
-    uses: ./.github/workflows/job-coverage.yml
-    secrets: inherit
