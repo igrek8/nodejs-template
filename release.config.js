@@ -7,7 +7,7 @@ module.exports = {
         releaseRules: [
           {
             type: 'build',
-            scppe: 'deps',
+            scope: 'deps',
             release: 'patch',
           },
         ],
@@ -15,7 +15,7 @@ module.exports = {
     ],
     '@semantic-release/release-notes-generator',
     ['@semantic-release/npm'],
-    ['@semantic-release/github'],
+    ['@semantic-release/github', { assets: ['dist/**'] }],
   ],
   branches: ['main'],
 };
