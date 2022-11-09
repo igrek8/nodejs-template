@@ -1,11 +1,6 @@
-# node.js
-node_modules/
-
-# macos
 .DS_Store
 
-# build
 dist/
-
-# docs
 docs/
+node_modules/
+coverage/

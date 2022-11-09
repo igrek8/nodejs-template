@@ -4,3 +4,5 @@
 
 media/
 dist/
+coverage/
+node_modules/

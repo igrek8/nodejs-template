@@ -9,4 +9,4 @@ updates:
         update-types: ['version-update:semver-major']
       - dependency-name: '@types/node'
     commit-message:
-      prefix: chore(deps)
+      prefix: build(deps)

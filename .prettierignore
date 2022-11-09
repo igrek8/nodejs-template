@@ -7,3 +7,6 @@ dist/
 .npmrc
 .husky/
 docs/
+node_modules/
+coverage/
+media/
