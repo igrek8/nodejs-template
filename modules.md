@@ -29,4 +29,4 @@ Returns a sum of two numbers
 
 #### Defined in
 
-[sum.ts:4](https://github.com/igrek8/nodejs-template/blob/95e3393/src/sum.ts#L4)
+[sum.ts:4](https://github.com/igrek8/nodejs-template/blob/fc54f49/src/sum.ts#L4)
