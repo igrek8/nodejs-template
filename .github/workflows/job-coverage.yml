@@ -11,12 +11,11 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: npm
       - run: npm ci
+      - uses: actions/download-artifact@v3
+        with:
+          name: coverage
+          path: ./coverage
       - name: coverage
-        uses: ArtiomTr/jest-coverage-report-action@v2
-        id: coverage
+        uses: codecov/codecov-action@v3
         with:
-          output: report-markdown
-          skip-step: install
-      - uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          message: ${{ steps.coverage.outputs.report }}
+          fail_ci_if_error: true

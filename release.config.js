@@ -15,7 +15,7 @@ module.exports = {
     ],
     '@semantic-release/release-notes-generator',
     ['@semantic-release/npm'],
-    ['@semantic-release/github', { assets: ['dist/**'] }],
+    ['@semantic-release/github'],
   ],
   branches: ['main'],
 };
