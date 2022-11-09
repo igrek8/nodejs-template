@@ -14,8 +14,8 @@ module.exports = {
       },
     ],
     '@semantic-release/release-notes-generator',
-    ['@semantic-release/npm', { npmPublish: false, tarballDir: './dist' }],
-    ['@semantic-release/github', { assets: './dist/*.tgz' }],
+    ['@semantic-release/npm'],
+    ['@semantic-release/github'],
   ],
   branches: ['main'],
 };

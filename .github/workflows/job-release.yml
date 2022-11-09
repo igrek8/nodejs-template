@@ -19,8 +19,8 @@ jobs:
       - run: |
           npm ci
           npx semantic-release
-          npm version from-git --allow-same-version --no-git-tag-version
-          npm publish --access public
+          # npm version from-git --allow-same-version --no-git-tag-version
+          # npm publish --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
