@@ -41,7 +41,7 @@
     "@igrek8/prettier-config": "1.0.1",
     "@igrek8/semantic-release-config": "1.1.0",
     "@igrek8/tsconfig": "1.0.1",
-    "@igrek8/typedoc-config": "1.0.0",
+    "@igrek8/typedoc-config": "1.0.1",
     "husky": "8.0.3",
     "rimraf": "4.1.2"
   }
