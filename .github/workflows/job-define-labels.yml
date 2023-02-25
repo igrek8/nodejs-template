@@ -1,7 +1,0 @@
-on: workflow_call
-
-jobs:
-  define-labels:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: srvaroa/labeler@v0.9

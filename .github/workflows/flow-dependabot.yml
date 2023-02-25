@@ -1,4 +1,4 @@
-name: flow-dependabot-auto-merge
+name: flow-dependabot
 
 on: pull_request_target
 
@@ -7,5 +7,5 @@ permissions:
   contents: write
 
 jobs:
-  dependabot-auto-merge:
+  dependabot:
     uses: igrek8/github-workflows/.github/workflows/job-dependabot-auto-merge.yml@main
