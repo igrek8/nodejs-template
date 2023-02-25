@@ -1,24 +1,28 @@
 {
   "name": "@igrek8/nodejs-template",
   "version": "0.0.0",
-  "private": false,
   "license": "MIT",
-  "author": "Igor <igrek8@users.noreply.github.com>",
-  "keywords": [],
-  "description": "",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/igrek8/nodejs-template",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/igrek8/nodejs-template"
+  "commitlint": {
+    "extends": "@igrek8/semantic-release-config/commitlint.config.js"
   },
-  "bugs": {
-    "url": "https://github.com/igrek8/nodejs-template/issues"
+  "release": {
+    "extends": "@igrek8/semantic-release-config"
+  },
+  "prettier": "@igrek8/prettier-config",
+  "jest": {
+    "preset": "@igrek8/jest-config"
+  },
+  "eslintConfig": {
+    "extends": "@igrek8/eslint-config"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "./dist"
   ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "jest",
@@ -26,37 +30,19 @@
     "build": "npm run clean && npm run compile",
     "lint": "eslint \"**/*\"",
     "format": "prettier --check \"**/*\"",
-    "docs:build": "typedoc --out ./docs",
-    "docs:publish": "cp ./public/index.html ./docs/index.html && gh-pages --dist ./docs",
-    "docs": "npm run docs:build && npm run docs:publish"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "17.4.4",
-    "@commitlint/config-conventional": "17.4.4",
-    "@semantic-release/commit-analyzer": "9.0.2",
-    "@semantic-release/github": "8.0.7",
-    "@semantic-release/npm": "9.0.2",
-    "@semantic-release/release-notes-generator": "10.0.3",
-    "@types/jest": "29",
-    "@types/node": "18.14.1",
-    "@typescript-eslint/eslint-plugin": "5.53.0",
-    "@typescript-eslint/parser": "5.53.0",
-    "eslint": "8.34.0",
-    "eslint-config-prettier": "8.6.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "gh-pages": "5.0.0",
-    "husky": "8.0.3",
-    "jest": "29",
-    "prettier": "2.8.4",
-    "rimraf": "4.1.2",
-    "semantic-release": "20.1.0",
-    "ts-jest": "29.0.5",
-    "ts-node": "10.9.1",
-    "typedoc": "0.23.25",
-    "typedoc-plugin-markdown": "3.14.0",
-    "typescript": "4.9.5"
+    "docs": "typedoc-config build -o ./docs && typedoc-config publish -o ./docs"
   },
   "dependencies": {
     "tslib": "^2"
+  },
+  "devDependencies": {
+    "@igrek8/eslint-config": "1.0.4",
+    "@igrek8/jest-config": "1.0.2",
+    "@igrek8/prettier-config": "1.0.1",
+    "@igrek8/semantic-release-config": "1.1.0",
+    "@igrek8/tsconfig": "1.0.1",
+    "@igrek8/typedoc-config": "1.0.0",
+    "husky": "8.0.3",
+    "rimraf": "4.1.2"
   }
 }
