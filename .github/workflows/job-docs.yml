@@ -9,13 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org
-          cache: npm
       - run: |
           npm ci
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git remote set-url origin $URL
           npm run docs
+        env:
+          URL: https://x-access-token:${{ github.GITHUB_TOKEN }}@github.com/${{ github.repository }}

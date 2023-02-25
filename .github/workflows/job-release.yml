@@ -1,4 +1,8 @@
-on: workflow_call
+on:
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
 
 jobs:
   release:
@@ -8,17 +12,13 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org
-          cache: npm
       - uses: actions/download-artifact@v3
         with:
           name: dist
-          path: ./dist
+          path: dist
       - run: |
           npm ci
           npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
