@@ -24,6 +24,9 @@ jobs:
   release:
     needs: [define-labels, format, lint, test, build, analyze, security]
     uses: ./.github/workflows/job-release.yml
+    with:
+      artifact-name: dist
+      artifact-path: dist
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   docs:

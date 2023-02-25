@@ -4,4 +4,4 @@
 
 [Docs](https://igrek8.github.io/nodejs-template)
 
-![Splash](./assets/images/emperor-penguin-chicks.webp)
+![Splash](./media/images/emperor-penguin-chicks.webp)

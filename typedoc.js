@@ -12,5 +12,5 @@ module.exports = {
   theme: 'markdown',
   out: './docs',
   sort: ['alphabetical'],
-  media: './assets',
+  media: './media',
 };

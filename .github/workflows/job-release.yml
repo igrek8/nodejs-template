@@ -1,5 +1,12 @@
 on:
   workflow_call:
+    inputs:
+      artifact-name:
+        type: string
+        required: false
+      artifact-path:
+        type: string
+        required: false
     secrets:
       NPM_TOKEN:
         required: true
@@ -12,13 +19,13 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v3
-      - uses: actions/download-artifact@v3
+      - if: ${{ inputs.artifact-name && inputs.artifact-path }}
+        uses: actions/download-artifact@v3
         with:
-          name: dist
-          path: dist
-      - run: |
-          npm ci
-          npx semantic-release
+          name: ${{ inputs.artifact-name }}
+          path: ${{ inputs.artifact-path }}
+      - run: npm ci
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ github.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
