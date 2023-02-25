@@ -3,7 +3,7 @@
 *.map
 LICENSE
 
-media/
+assets/
 dist/
 coverage/
 node_modules/

@@ -21,11 +21,11 @@ jobs:
     uses: ./.github/workflows/job-security.yml
     secrets:
       SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
-  # release:
-  #   needs: [define-labels, format, lint, test, build, analyze, security]
-  #   uses: ./.github/workflows/job-release.yml
-  #   secrets:
-  #     NPM_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+  release:
+    needs: [define-labels, format, lint, test, build, analyze, security]
+    uses: ./.github/workflows/job-release.yml
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   docs:
-    # needs: [release]
+    needs: [release]
     uses: ./.github/workflows/job-docs.yml
