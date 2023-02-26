@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "commitlint": {
-    "extends": "@igrek8/semantic-release-config/commitlint.config.js"
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "release": {
     "extends": "@igrek8/semantic-release-config"
@@ -36,10 +38,11 @@
     "tslib": "^2"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "17.4.4",
     "@igrek8/eslint-config": "1.0.4",
     "@igrek8/jest-config": "1.0.2",
     "@igrek8/prettier-config": "1.0.1",
-    "@igrek8/semantic-release-config": "1.1.0",
+    "@igrek8/semantic-release-config": "1.1.1",
     "@igrek8/tsconfig": "1.0.1",
     "@igrek8/typedoc-config": "1.0.1",
     "husky": "8.0.3",
