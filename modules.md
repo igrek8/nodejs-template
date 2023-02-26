@@ -6,9 +6,33 @@
 
 ### Functions
 
+- [subtract](modules.md#subtract)
 - [sum](modules.md#sum)
 
 ## Functions
+
+### subtract
+
+▸ **subtract**(`a`, `b`): `number`
+
+Returns a subtraction of two numbers
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `a` | `number` |
+| `b` | `number` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[math.ts:11](https://github.com/igrek8/nodejs-template/blob/f1fb0f0/src/math.ts#L11)
+
+___
 
 ### sum
 
@@ -29,4 +53,4 @@ Returns a sum of two numbers
 
 #### Defined in
 
-[sum.ts:4](https://github.com/igrek8/nodejs-template/blob/e782aa4/src/sum.ts#L4)
+[math.ts:4](https://github.com/igrek8/nodejs-template/blob/f1fb0f0/src/math.ts#L4)
