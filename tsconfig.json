@@ -1,4 +1,4 @@
 {
-  "extends": "@igrek8/tsconfig/common.json",
+  "extends": "@igrek8/typescript/common.json",
   "include": ["src"]
 }

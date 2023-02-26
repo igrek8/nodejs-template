@@ -2,49 +2,51 @@
   "name": "@igrek8/nodejs-template",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "prettier": "@igrek8/prettier",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "extends": "@igrek8/semantic-release"
+  },
+  "jest": {
+    "preset": "@igrek8/jest",
+    "rootDir": "src"
+  },
+  "eslintConfig": {
+    "extends": "@igrek8/eslint-config"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
   },
-  "release": {
-    "extends": "@igrek8/semantic-release-config"
-  },
-  "prettier": "@igrek8/prettier-config",
-  "jest": {
-    "preset": "@igrek8/jest-config"
-  },
-  "eslintConfig": {
-    "extends": "@igrek8/eslint-config"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "./dist"
-  ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./dist",
+    "clean": "rimraf dist",
     "test": "jest",
-    "compile": "tsc --outDir ./dist --project ./tsconfig.build.json",
+    "compile": "tsc -p tsconfig.build.json",
     "build": "npm run clean && npm run compile",
     "lint": "eslint \"**/*\"",
     "format": "prettier --check \"**/*\"",
-    "docs": "typedoc-config build -o ./docs && typedoc-config publish -o ./docs"
+    "docs": "typedoc build -o docs && typedoc publish -o docs"
   },
   "dependencies": {
     "tslib": "^2"
   },
   "devDependencies": {
+    "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
-    "@igrek8/eslint-config": "1.0.4",
-    "@igrek8/jest-config": "1.0.2",
-    "@igrek8/prettier-config": "1.0.1",
-    "@igrek8/semantic-release-config": "1.1.1",
-    "@igrek8/tsconfig": "1.0.1",
-    "@igrek8/typedoc-config": "1.0.1",
+    "@igrek8/eslint-config": "1.0.6",
+    "@igrek8/jest": "1.0.1",
+    "@igrek8/prettier": "1.0.1",
+    "@igrek8/semantic-release": "1.0.2",
+    "@igrek8/typescript": "1.0.1",
+    "@igrek8/typedoc": "1.0.1",
     "husky": "8.0.3",
     "rimraf": "4.1.2"
   }
