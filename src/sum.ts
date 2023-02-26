@@ -11,3 +11,10 @@ export function sum(a: number, b: number) {
 export function subtract(a: number, b: number) {
   return a - b;
 }
+
+/**
+ * Returns a division of two numbers
+ */
+export function divide(a: number, b: number) {
+  return a / b;
+}
