@@ -2,6 +2,16 @@
   "name": "@igrek8/nodejs-template",
   "version": "0.0.0",
   "license": "MIT",
+  "author": "Igor Korchagin (https://github.com/igrek8)",
+  "keywords": [],
+  "homepage": "https://github.com/igrek8/nodejs-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igrek8/nodejs-template"
+  },
+  "bugs": {
+    "url": "https://github.com/igrek8/nodejs-template/issues"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
