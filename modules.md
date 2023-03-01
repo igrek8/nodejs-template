@@ -30,7 +30,7 @@ Returns a subtraction of two numbers
 
 #### Defined in
 
-[math.ts:11](https://github.com/igrek8/nodejs-template/blob/f1fb0f0/src/math.ts#L11)
+[math.ts:11](https://github.com/igrek8/nodejs-template/blob/c775225/src/math.ts#L11)
 
 ___
 
@@ -53,4 +53,4 @@ Returns a sum of two numbers
 
 #### Defined in
 
-[math.ts:4](https://github.com/igrek8/nodejs-template/blob/f1fb0f0/src/math.ts#L4)
+[math.ts:4](https://github.com/igrek8/nodejs-template/blob/c775225/src/math.ts#L4)
